@@ -1,26 +1,16 @@
 #!/bin/bash
+
+echo "Content-type: text/html"
+echo
+
 read POST
 
 foi(){
-cat <<EOFFF
-content-type: text/html
-
-        <html>
-        <h1>caralho</h1>
-        <a href="../pgnadm.html">Voltar</a>
-        </html>
-EOFFF
+ cat '/var/www/html/sucessoc.html'
 }
 
 foinao(){
-cat <<EOFFF
-content-type: text/html
-
-        <html>
-     <h1>deu pau</h1>
-        <a href="../pgnadm.html">Voltar</a>
-        </html>
-EOFFF
+ cat '/var/www/html/falhac.html'
 }
 
 usuario=$(echo $POST | cut -d"&" -f1 | cut -d"=" -f2)

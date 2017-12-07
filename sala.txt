@@ -1,0 +1,6 @@
+CFP1.32:2:5:857709:8098PFXA0923:Monitor LG flatron 
+CFP1.32:2:5:862189:8098PAEN6472:Monitor LG flatron 
+CFP1.32:2:5:860595:809SPNY99623:Monitor LG flatron 
+CFP1.32:2:5:1061431:1A770MQ4O:positivo:master:microcomputador desktop
+CFP1.32:2:5:1057060:1A770MT0D:positivo:master:microcomputador desktop
+CFP1.32:2:5:1056799:1A7673020:positivo:master:microcomputador desktop
