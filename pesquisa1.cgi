@@ -36,9 +36,3 @@ echo "</table>"
 echo "</div>"
 echo "</body>"
 echo "</html>"
-
-#grep ^$PESQUISA estoque > localidade.txt
-
-#echo "<pre>$(cat localidade.txt)</pre>"
-
-
