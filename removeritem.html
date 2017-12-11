@@ -5,13 +5,15 @@
             <meta charset="utf-8">
             <title>Inventário </title>
             <link href="Senai.ico" rel="shortcut icon" type="image/x-icon"/>
-            <style>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../js/bootstrap.min.js" rel="stylesheet">
+	<style>
         * {
             margin: 0;
             padding: 0;
         }
 body{
-background-color: black;
+background-color: white;
 }
 
         .menu {
@@ -106,18 +108,21 @@ background-color: black;
 
             .voltar ul ul li {
                 float: none;
-                border-bottom: solid 1px #fff;
+       		border-bottom: solid 1px #fff;
             }
 
                 .voltar ul ul li a {
                     background-color: #680045;
                 }
 		.lista{
-		color: white;
+		color: black;
 		font-family: sans-serif;
 		margin: 0;
 		}	
-
+	
+	#formulario input{
+	width:300px;	
+}
         
     </style>
 
@@ -126,17 +131,18 @@ background-color: black;
             <li><a href="../pgnadm.html"><b> Voltar </b></a>
             </li>
                 </ul>
+            </li>
         </nav>
 
 <body>
 <div class="lista">
 
-<form action="/action_page.php"><br><br>
+<form action="/action_page.php" id="formulario"><br><br>
   
+  Digite o número de patrimônio do produto que deseja excluir:<br>
+  <input type="text" name="firstname" class="form-control" ><br>
  
-  Digite o número de patrimônio do produto que deseja excluir:<br><br>
-  <input type="text" name="firstname"><br><br>
-  <input type="submit" value="Excluir patrimônio">
+  <input type="submit" value="Enviar"
 
 </body>
 </html>

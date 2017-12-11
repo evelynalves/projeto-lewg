@@ -1,17 +1,20 @@
 #!/bin/bash
-IFS=$'/n'
+IFS=$'\n'
 
 echo "content-type: text/html"
 echo
 
 read LOCAL
 
-CAMPO=$(echo $LOCAL | cut -d"=" -f2 ) 
+#echo "$LOCAL"> teste.txt
+
+CAMPO=$(echo $LOCAL | cut -d"=" -f2)
 
 PESQUISA="$CAMPO:"
 cat "/var/www/html/estoque2.html"
 
-for x in $(grep .:"$PESQUISA" estoque); do
+for x in $(grep "$PESQUISA" estoque); do
+#for x in $(grep .:"$PESQUISA" estoque) ; do
 	echo "<tr>"
 	for y in $(echo $x) ; do
 		var1=$(echo $y | cut -d":" -f1)
