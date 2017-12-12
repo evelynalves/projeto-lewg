@@ -1,33 +1,21 @@
 #!/bin/bash
-read POST
+read VALOR
 
-foi(){
-cat <<EOFFF
-content-type: text/html
+echo "content-type: text/html"
+echo
 
-        <html>
-        <h1>caralho</h1>
-        <a href="../pgnadm.html">Voltar</a>
-        </html>
-EOFFF
-}
+LOCAL=$(echo $VALOR | cut -d"&" -f1 | cut -d"=" -f2)
+ANDAR=$(echo $VALOR | cut -d"&" -f2 | cut -d"=" -f2)
+SALA=$(echo $VALOR | cut -d"&" -f3 | cut -d"=" -f2)
+NP=$(echo $VALOR | cut -d"&" -f4 | cut -d"=" -f2)
+NS=$(echo $VALOR | cut -d"&" -f5 | cut -d"=" -f2)
+MARCA=$(echo $VALOR | cut -d"&" -f6 | cut -d"=" -f2)
+MODELO=$(echo $VALOR | cut -d"&" -f7 | cut -d"=" -f2)
+DESCRICAO=$(echo $VALOR | cut -d"&" -f8 | cut -d"=" -f2)
 
-foinao(){
-cat <<EOFFF
-content-type: text/html
+echo "$LOCAL:$ANDAR:$SALA:$NP:$NS:$MARCA:$MODELO:$DESCRICAO" >> estoque
 
-        <html>
-     <h1>deu pau</h1>
-        <a href="../pgnadm.html">Voltar</a>
-        </html>
-EOFFF
-}
+cat '/var/www/html/items.html'
 
-usuario=$(echo $POST | cut -d"&" -f1 | cut -d"=" -f2)
-senha=$(echo $POST | cut -d"&" -f2 | cut -d"=" -f2)
-if [[ ! $(grep "^$usuario:" passwd) ]] ; then
-        echo "$usuario:$senha" >> passwd
-        foi
-else
-        foinao
-fi
+
+

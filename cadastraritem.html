@@ -137,28 +137,29 @@ background-color: white;
 <body>
 <div class="lista">
 
-<form action="/action_page.php" id="formulario"><br><br>
+<form action="cgi-bin/cadastraritem.cgi" id="formulario" method="POST"><br><br>
   
   Digite a localidade:<br>
-  <input type="text" name="firstname" class="form-control" ><br>
+  <input type="text" name="local" class="form-control" ><br>
   Digite a andar:<br>
-  <input type="text" name="firstname" class="form-control" ><br>
+  <input type="text" name="andar" class="form-control" ><br>
   Digite a sala:<br>
-  <input type="text" name="firstname" class="form-control" ><br>
+  <input type="text" name="sala" class="form-control" ><br>
   Digite a número de patrimônio:<br>
-  <input type="text" name="firstname" class="form-control" ><br>
+  <input type="text" name="np" class="form-control" ><br>
   Digite a número de série:<br>
-  <input type="text" name="firstname" class="form-control" ><br>
+  <input type="text" name="ns" class="form-control" ><br>
   Digite a marca:<br>
-  <input type="text" name="firstname" class="form-control" ><br>
+  <input type="text" name="marca" class="form-control" ><br>
   Digite a modelo:<br>
-  <input type="text" name="firstname" class="form-control" ><br>
+  <input type="text" name="modelo" class="form-control" ><br>
   <label for="subject">Adicione uma descrição: </label><br>
-    <textarea id="subject" name="subject" style="height:180px; width:300px;" class="form-control"></textarea>
+    <textarea id="subject" name="descricao" style="height:180px; width:300px;" class="form-control"></textarea>
 
   <br><br>
  
   <input type="submit" value="Enviar">
+</form>
 
 </body>
 </html>

@@ -1,21 +1,17 @@
 #!/bin/bash
 IFS=$'\n'
-
 echo "content-type: text/html"
 echo
-
 read LOCAL
 
-#echo "$LOCAL"> teste.txt
+PESQUISA=$(echo $LOCAL | cut -d"=" -f2)
 
-CAMPO=$(echo $LOCAL | cut -d"=" -f2)
-
-PESQUISA="$CAMPO:"
+##PESQUISA="$CAMPO:"
 cat "/var/www/html/estoque2.html"
 
-for x in $(grep "$PESQUISA" estoque); do
-#for x in $(grep .:"$PESQUISA" estoque) ; do
+for x in $(grep -Ei "(.*:){1}$PESQUISA(:.*){6}" estoque); do
 	echo "<tr>"
+
 	for y in $(echo $x) ; do
 		var1=$(echo $y | cut -d":" -f1)
 		var2=$(echo $y | cut -d":" -f2)

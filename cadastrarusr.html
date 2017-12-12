@@ -5,13 +5,15 @@
             <meta charset="utf-8">
             <title>Inventário </title>
             <link href="Senai.ico" rel="shortcut icon" type="image/x-icon"/>
-            <style>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../js/bootstrap.min.js" rel="stylesheet">
+	<style>
         * {
             margin: 0;
             padding: 0;
         }
 body{
-background-color: black;
+background-color: white;
 }
 
         .menu {
@@ -106,18 +108,21 @@ background-color: black;
 
             .voltar ul ul li {
                 float: none;
-                border-bottom: solid 1px #fff;
+       		border-bottom: solid 1px #fff;
             }
 
                 .voltar ul ul li a {
                     background-color: #680045;
                 }
 		.lista{
-		color: white;
+		color: black;
 		font-family: sans-serif;
 		margin: 0;
 		}	
-
+	
+	#formulario input{
+	width:300px;	
+}
         
     </style>
 
@@ -132,15 +137,15 @@ background-color: black;
 <body>
 <div class="lista">
 
-<form action="/cgi-bin/cadastrarusr.cgi" method="post"><br><br>
-  Digite um nome para novo usuário:<br>
-  <input type="text" name="nome" >
-  <br><br>
+<form action="/cgi-bin/cadastrarusr.cgi" id="formulario" method="post" ><br><br>
+  
+  Digite um nome para o usuário:<br>
+  <input type="text" name="usuario" class="form-control" ><br>
+
   Digite uma senha:<br>
-  <input type="password" name="senha" >
-  <br><br>
-  <input type="submit" value="                          Cadastrar                              ">
-</form> 
+  <input type="text" name="senha" class="form-control" ><br>
+ 
+  <input type="submit" value="Cadastrar"
 
 </body>
 </html>
